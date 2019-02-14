@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "998366820609",
+    "firebase_url": "https://karawanmyfinal-application2018.firebaseio.com",
+    "project_id": "karawanmyfinal-application2018",
+    "storage_bucket": "karawanmyfinal-application2018.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998366820609:android:a03570a17f338ef9",
+        "android_client_info": {
+          "package_name": "om.banat.karawan.karawanmyfinalapplication2018"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "998366820609-kmjs8h7umam7l0i1r6c0nguvfvh1s3m1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "om.banat.karawan.karawanmyfinalapplication2018",
+            "certificate_hash": "bace785c20fc4fbb11d8b6953b1f1c63e0a041d0"
+          }
+        },
+        {
+          "client_id": "998366820609-u5l00u0oh7m1vclkqaf6u18g291copu0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcSFhgZR_kpZm-yUaLgxZtGz3rwBqVL7M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "998366820609-u5l00u0oh7m1vclkqaf6u18g291copu0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
