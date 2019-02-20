@@ -13,9 +13,8 @@
         android:ems="10"
         android:hint="FirstName"
         android:inputType="textPersonName"
-        android:text="FirstName"
         tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="26dp" />
 
     <EditText
         android:id="@+id/etLastName"
@@ -24,7 +23,6 @@
         android:ems="10"
         android:hint="LastName"
         android:inputType="textPersonName"
-        android:text="LastName"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="100dp" />
 
@@ -35,7 +33,6 @@
         android:ems="10"
         android:hint="Phone"
         android:inputType="phone"
-        android:text="Phone"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="175dp" />
 
@@ -46,7 +43,6 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:text="Email"
         tools:layout_editor_absoluteX="85dp"
         tools:layout_editor_absoluteY="243dp" />
 
@@ -58,7 +54,7 @@
         android:hint="Password"
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="306dp" />
+        tools:layout_editor_absoluteY="314dp" />
 
     <Button
         android:id="@+id/btnSave"

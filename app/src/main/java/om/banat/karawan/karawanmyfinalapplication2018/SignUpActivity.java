@@ -44,7 +44,6 @@ public class SignUpActivity extends AppCompatActivity {
                 dataHandler();
             }
         });
-
     }
 
     private void dataHandler() {
@@ -58,17 +57,13 @@ public class SignUpActivity extends AppCompatActivity {
             etEmail.setError("wrong Email");
 
             isok = false;
-
         }
                 if (password.length() < 8) {
                 etpassword.setError("Have to be least 8 char");
                 isok = false;
             }
-
-
             if (isok) {
                 creatAcount(email , password);
-
             }
     }
 

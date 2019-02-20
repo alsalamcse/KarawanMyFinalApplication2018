@@ -31,14 +31,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=" signin"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="265dp" />
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="231dp" />
 
     <Button
         android:id="@+id/btnSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="signup"
-        tools:layout_editor_absoluteX="207dp"
-        tools:layout_editor_absoluteY="265dp" />
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="231dp" />
 </android.support.constraint.ConstraintLayout>
