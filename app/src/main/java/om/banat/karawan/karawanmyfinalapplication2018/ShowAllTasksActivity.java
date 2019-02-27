@@ -22,7 +22,6 @@ public class ShowAllTasksActivity extends AppCompatActivity {
         readTasks();
     }
   private void readTasks(){
-      Database
   }
 
     }
