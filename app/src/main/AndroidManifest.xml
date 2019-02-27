@@ -27,7 +27,8 @@
             android:label="@string/title_activity_main_tabs"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".volunteerActivity" />
-        <activity android:name=".ShowAllTasksActivity"></activity>
+        <activity android:name=".ShowAllTasksActivity" />
+        <activity android:name=".SplashActivity"></activity>
     </application>
 
 </manifest>
