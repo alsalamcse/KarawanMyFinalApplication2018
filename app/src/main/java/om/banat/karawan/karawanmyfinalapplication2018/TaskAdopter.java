@@ -9,14 +9,12 @@ import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.sql.Array;
 
 public class TaskAdopter extends ArrayAdapter<MyTask> {
     public TaskAdopter( Context context, int resource) {
         super(context, resource);
     }
-
     @Override
     public View getView(int position,  View convertView,  ViewGroup parent) {
         if (convertView==null)//to build one item
@@ -32,15 +30,12 @@ public class TaskAdopter extends ArrayAdapter<MyTask> {
         tvTitle.setText(m.getText());
         skbImp.setProgress(m.getImportant());
         SeekBar.setProgress(m.getNecessary());
-
         ibDel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(),"Dell",Toast.LENGTH_SHORT).show();
             }
         });
-
         return convertView;
-
     }
 }

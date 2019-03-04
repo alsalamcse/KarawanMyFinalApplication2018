@@ -48,7 +48,6 @@ class LoginActivity extends AppCompatActivity {
         if (email.length() < 4 || email.indexOf('@') < 0 || email.indexOf('.') < 0) {
             etEmail.setError("wrong Email");
             isok = false;
-
         }
     }
     private void signIn (String email,String password) {
@@ -68,6 +67,5 @@ class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
 }
 

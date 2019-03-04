@@ -23,7 +23,6 @@ public class SignUpActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private FirebaseUser user;
     private Button btnSave;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +54,6 @@ public class SignUpActivity extends AppCompatActivity {
         String phone = etPhone.getText().toString();
         if (email.length() < 4 || email.indexOf('@') < 0 || email.indexOf('.') < 0) {
             etEmail.setError("wrong Email");
-
             isok = false;
         }
                 if (password.length() < 8) {
