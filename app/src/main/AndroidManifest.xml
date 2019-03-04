@@ -26,8 +26,9 @@
             android:name=".MainTabsActivity"
             android:label="@string/title_activity_main_tabs"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ShowAllTasksActivity" />
-        <activity android:name=".SplashActivity"></activity>
+        <activity android:name=".SplashActivity" />
+        <activity android:name=".AddHajj" />
+        <activity android:name=".ResearchResultsHajj"></activity>
     </application>
 
 </manifest>
