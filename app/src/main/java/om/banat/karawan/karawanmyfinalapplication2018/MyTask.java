@@ -16,7 +16,7 @@ public class MyTask {
         this.text = text;
     }
 
-    public SeekBar getImportant() {
+    public int getImportant() {
         return important;
     }
 

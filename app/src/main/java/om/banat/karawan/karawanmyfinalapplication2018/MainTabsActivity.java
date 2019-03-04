@@ -129,14 +129,38 @@ public class MainTabsActivity extends AppCompatActivity {
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
+        HajjFragment hajjFragment;
+        VolunteerFragment volunteerFragment;
+        RequestsFragment requestsFragment;
+
+
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
         }
+
 
         @Override
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
+
+            if (position == 0)
+            {
+                if (hajjFragment == null)
+                    hajjFragment = new HajjFragment();
+                return hajjFragment;
+            }
+            if (position == 1)
+            {
+                if (volunteerFragment == null)
+                    volunteerFragment = new VolunteerFragment();
+                return volunteerFragment;
+            }if (position == 2)
+            {
+                if (requestsFragment == null)
+                    requestsFragment = new RequestsFragment();
+                return requestsFragment;
+            }
             return PlaceholderFragment.newInstance(position + 1);
         }
 

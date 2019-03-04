@@ -38,7 +38,6 @@ class LoginActivity extends AppCompatActivity {
             private void dataHandler() {
             }
         });
-
     }
 
     private void dataHandler() {
