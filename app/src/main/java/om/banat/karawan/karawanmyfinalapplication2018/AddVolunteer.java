@@ -2,8 +2,12 @@ package om.banat.karawan.karawanmyfinalapplication2018;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class AddVolunteer extends AppCompatActivity {
 
@@ -13,10 +17,9 @@ public class AddVolunteer extends AppCompatActivity {
     private EditText etvPlaceLiving;
     private EditText etvPhone;
     private EditText etvEmail;
+    private FirebaseAuth auth;
+    private FirebaseUser user;
     private Button btvShare;
-
-
-
 
 
 
@@ -30,11 +33,21 @@ public class AddVolunteer extends AppCompatActivity {
         etvPhone=(EditText)findViewById(R.id.etvPhone);
         etvEmail=(EditText)findViewById(R.id.etvEmail);
         btvShare=(Button) findViewById(R.id.btvShare);
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+        FirebaseUser firebaseUser;
+        firebaseUser = auth.getCurrentUser();
 
+        btvShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dataHandler();
 
-
-
-
-
+            }
+        });
     }
+      private void dataHandler(){
+
+      }
 }
+
