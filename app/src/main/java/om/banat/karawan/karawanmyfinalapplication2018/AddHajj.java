@@ -12,7 +12,9 @@ private EditText edAge;
 private EditText edPlaceLiving;
 private EditText edphone;
 private EditText edEmail;
+private EditText edInformation;
 private Button btShare;
+
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ private Button btShare;
         edPlaceLiving=(EditText)findViewById(R.id.edPlaceLiving);
         edphone=(EditText)findViewById(R.id.edphone);
         edEmail=(EditText)findViewById(R.id. edEmail);
+        edInformation=(EditText)findViewById(R.id.edInformation);
         btShare=(Button)findViewById(R.id.btShare);
 
     }
