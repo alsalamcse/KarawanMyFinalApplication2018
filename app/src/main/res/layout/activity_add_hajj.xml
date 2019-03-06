@@ -80,9 +80,19 @@
         android:id="@+id/btShare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="32dp"
         android:text="Share"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="another"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="393dp" />
 </android.support.constraint.ConstraintLayout>

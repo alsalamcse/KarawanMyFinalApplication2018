@@ -20,7 +20,7 @@ public class ResearchResultsHajj extends AppCompatActivity {
                 startActivity(new Intent());
             }
         });
-        SearchButton=(FloatingActionButton)findViewById(R.id.SearchButton);
+        SearchButton=(FloatingActionButton) findViewById(R.id.SearchButton);
         SearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
