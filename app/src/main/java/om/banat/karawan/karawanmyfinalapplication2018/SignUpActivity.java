@@ -45,7 +45,6 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
     }
-
     private void dataHandler() {
         boolean isok = true;
         String email = etEmail.getText().toString();
