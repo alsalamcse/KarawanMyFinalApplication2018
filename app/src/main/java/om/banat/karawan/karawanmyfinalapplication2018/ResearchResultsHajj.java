@@ -7,7 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 
 public class ResearchResultsHajj extends AppCompatActivity {
-        private FloatingActionButton AddButton;
+       //Hajj fragment
+       private FloatingActionButton AddButton;
         private FloatingActionButton SearchButton;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +25,10 @@ public class ResearchResultsHajj extends AppCompatActivity {
         SearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
             }
         });
+
+
     }
 }
 

@@ -11,8 +11,8 @@
         android:id="@+id/tvitmTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="222dp"
+        android:layout_marginStart="324dp"
+        android:layout_marginTop="16dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,9 +30,11 @@
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
         android:max="10"
         android:progress="3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvitmTextr" />
 
@@ -40,7 +42,9 @@
         android:id="@+id/skbitmImp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvitmTextr" />
 
@@ -48,6 +52,8 @@
         android:id="@+id/ibtnitmDelTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="308dp"
         app:layout_constraintStart_toStartOf="@+id/tvitmTextr"
         app:layout_constraintTop_toTopOf="@+id/tvitmTextr"
         app:srcCompat="@android:drawable/ic_delete" />

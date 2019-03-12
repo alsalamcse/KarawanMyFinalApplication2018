@@ -42,7 +42,7 @@ public class AddHajj extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),HajjFragment.class);
                 startActivity(i);
-                dataHandler();
+
 
             }
         });
@@ -51,6 +51,7 @@ public class AddHajj extends AppCompatActivity {
     private void dataHandler() {
 
     }
+
 
 
 }

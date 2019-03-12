@@ -10,4 +10,6 @@
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
     tools:context=".HajjFragment"
-    tools:listitem="@layout/fragment_hajj" />
+    tools:listitem="@layout/fragment_hajj" >
+
+</android.support.v7.widget.RecyclerView>
