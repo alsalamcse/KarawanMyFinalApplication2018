@@ -1,5 +1,6 @@
 package om.banat.karawan.karawanmyfinalapplication2018;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,8 +22,6 @@ public class AddVolunteer extends AppCompatActivity {
     private FirebaseUser user;
     private Button btvShare;
 
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_volunteer);
@@ -41,13 +40,15 @@ public class AddVolunteer extends AppCompatActivity {
         btvShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(),VolunteerFragment.class);
+                startActivity(i);
                 dataHandler();
-
             }
         });
     }
       private void dataHandler(){
 
       }
+
 }
 

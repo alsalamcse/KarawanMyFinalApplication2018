@@ -29,7 +29,8 @@
         <activity android:name=".SplashActivity" />
         <activity android:name=".AddHajj" />
         <activity android:name=".ResearchResultsHajj" />
-        <activity android:name=".AddVolunteer"></activity>
+        <activity android:name=".AddVolunteer" />
+        <activity android:name=".MyRequests"></activity>
     </application>
 
 </manifest>

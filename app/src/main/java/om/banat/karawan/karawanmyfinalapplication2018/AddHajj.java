@@ -40,6 +40,9 @@ public class AddHajj extends AppCompatActivity {
         btShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(),HajjFragment.class);
+                startActivity(i);
+                dataHandler();
 
             }
         });
