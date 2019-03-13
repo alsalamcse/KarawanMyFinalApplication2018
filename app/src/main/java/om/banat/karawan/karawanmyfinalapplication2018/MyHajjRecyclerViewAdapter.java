@@ -69,6 +69,8 @@ public class MyHajjRecyclerViewAdapter extends RecyclerView.Adapter<MyHajjRecycl
             mContentView = (TextView) view.findViewById(R.id.content);
         }
 
+
+
         @Override
         public String toString() {
             return super.toString() + " '" + mContentView.getText() + "'";
