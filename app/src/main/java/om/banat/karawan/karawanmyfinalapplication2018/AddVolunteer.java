@@ -47,6 +47,10 @@ public class AddVolunteer extends AppCompatActivity {
         });
     }
       private void dataHandler(){
+        String Name=etvName.getText().toString();
+        String LastName=etvLastNamr.getText().toString();
+        String Age=etvAge.getText().toString();
+
 
 
 
