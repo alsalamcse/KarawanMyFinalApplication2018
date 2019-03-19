@@ -34,18 +34,20 @@ public class AddHajj extends AppCompatActivity {
         edphone = (EditText) findViewById(R.id.edphone);
         edInformation = (EditText) findViewById(R.id.edInformation);
         btShare = (Button) findViewById(R.id.btShare);
-
         btShare.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                dataHandler();
                 Intent i=new Intent(getApplicationContext(),HajjFragment.class);
                 startActivity(i);
-
             }
         });
     }
     private void dataHandler() {
+
+
+
         String Name =edName.getText().toString();
         String LastName=edLastName.getText().toString();
         String Age=edAge.getText().toString();
@@ -53,8 +55,13 @@ public class AddHajj extends AppCompatActivity {
         String Email=edEmail.getText().toString();
         String Phone=edphone.getText().toString();
         String Information=edInformation.getText().toString();
-
     }
+
+   // FirebaseAuth auth=FirebaseAuth.getInstance();
+    //
+
+
+
 }
 
 

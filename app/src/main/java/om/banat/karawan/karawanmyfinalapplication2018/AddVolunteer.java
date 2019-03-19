@@ -50,6 +50,13 @@ public class AddVolunteer extends AppCompatActivity {
         String Name=etvName.getText().toString();
         String LastName=etvLastNamr.getText().toString();
         String Age=etvAge.getText().toString();
+        String PlaceLiving=etvPlaceLiving.getText().toString();
+        String Phone=etvPhone.getText().toString();
+        String Email=etvEmail.getText().toString();
+
+
+
+
 
 
 

@@ -25,6 +25,8 @@ public class ResearchResultsHajj extends AppCompatActivity {
         SearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                
             }
         });
 
