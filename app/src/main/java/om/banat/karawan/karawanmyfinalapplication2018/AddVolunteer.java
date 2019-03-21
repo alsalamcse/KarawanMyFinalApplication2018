@@ -27,12 +27,10 @@ public class AddVolunteer extends AppCompatActivity {
     private Button btvShare;
 
     DatabaseReference databaseAddVolunteer;
-
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_volunteer);
+        databaseAddVolunteer=FirebaseDatabase.getInstance().getReference("Volunteer");
         etvName=(EditText)findViewById(R.id.etvName);
         etvLastNamr=(EditText)findViewById(R.id.etvLastNamr);
         etvAge=(EditText)findViewById(R.id.etvAge);
@@ -63,17 +61,12 @@ public class AddVolunteer extends AppCompatActivity {
         String Email=etvEmail.getText().toString();
         if (!TextUtils.isEmpty(Name+LastName+Age+Phone+PlaceLiving+Email))
         {
+
             Toast.makeText(this,"Volunteer Added",Toast.LENGTH_LONG).show();
         }
         else {
             Toast.makeText(this,"You Should enter a name",Toast.LENGTH_LONG).show();
         }
-
-
-
-
-
-
 
 
 

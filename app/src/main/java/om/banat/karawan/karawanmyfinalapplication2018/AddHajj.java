@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
@@ -26,8 +27,6 @@ public class AddHajj extends AppCompatActivity {
     private EditText edInformation;
     private Button btShare;
     DatabaseReference databaseAddHajj;
-
-
 
 
 
@@ -68,7 +67,14 @@ public class AddHajj extends AppCompatActivity {
         String Email=edEmail.getText().toString();
         String Phone=edphone.getText().toString();
         String Information=edInformation.getText().toString();
-        if (!TextUtils.isEmpty(Name+LastName+Age+PlaceLiving+Email+Phone+Information)){
+        if (!TextUtils.isEmpty(Name)) {
+            Toast.makeText(this, "Hajj Added", Toast.LENGTH_LONG).show();
+        }
+        else
+            Toast.makeText(this,"You Should enter a name",Toast.LENGTH_LONG).show();
+        {
+
+
 
         }
 
