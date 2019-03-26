@@ -2,10 +2,12 @@ package om.banat.karawan.karawanmyfinalapplication2018;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +30,7 @@ public class HajjFragment extends Fragment {
     // TODO: Customize parameters
     private int mColumnCount = 1;
     private OnListFragmentInteractionListener mListener;
+
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -91,6 +94,9 @@ public class HajjFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
+    private FloatingActionButton SearchButton;
+
+
 
     /**
      * This interface must be implemented by activities that contain this
