@@ -4,14 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyRequests">
+    tools:context=".MyRequests"
+    tools:layout_editor_absoluteY="81dp">
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="63dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="134dp"
-        tools:layout_editor_absoluteY="63dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

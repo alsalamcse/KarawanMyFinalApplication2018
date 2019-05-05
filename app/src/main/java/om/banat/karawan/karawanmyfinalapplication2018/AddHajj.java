@@ -47,7 +47,6 @@ public class AddHajj extends AppCompatActivity {
         //user=auth.getCurrentUser();
         btShare.setOnClickListener(new View.OnClickListener() {
 
-
             @Override
             public void onClick(View v) {
                dataHandler();

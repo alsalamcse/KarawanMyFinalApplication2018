@@ -9,14 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".KarawanActivity2018">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LogInActivity" />
         <activity android:name=".SignUpActivity" />
         <activity
             android:name=".MainActivity"
@@ -26,11 +25,11 @@
             android:name=".MainTabsActivity"
             android:label="@string/title_activity_main_tabs"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SplashActivity" />
         <activity android:name=".AddHajj" />
         <activity android:name=".ResearchResultsHajj" />
         <activity android:name=".AddVolunteer" />
-        <activity android:name=".MyRequests"></activity>
+        <activity android:name=".MyRequests" />
+        <activity android:name=".LoginActivity2"></activity>
     </application>
 
 </manifest>

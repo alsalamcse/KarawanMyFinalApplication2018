@@ -12,10 +12,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import om.banat.karawan.karawanmyfinalapplication2018.dummy.DummyContent;
 import om.banat.karawan.karawanmyfinalapplication2018.dummy.DummyContent.DummyItem;
 
 import java.util.List;
+
 
 /**
  * A fragment representing a list of Items.
@@ -23,6 +27,7 @@ import java.util.List;
  * Activities containing this fragment MUST implement the {@link OnListFragmentInteractionListener}
  * interface.
  */
+
 public class HajjFragment extends Fragment {
 
     // TODO: Customize parameter argument names
@@ -36,6 +41,7 @@ public class HajjFragment extends Fragment {
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
+
     public HajjFragment() {
     }
 
@@ -77,7 +83,6 @@ public class HajjFragment extends Fragment {
         return view;
     }
 
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -88,7 +93,6 @@ public class HajjFragment extends Fragment {
                     + " must implement OnListFragmentInteractionListener");
         }
     }
-
     @Override
     public void onDetach() {
         super.onDetach();
@@ -112,4 +116,8 @@ public class HajjFragment extends Fragment {
         // TODO: Update argument type and name
         void onListFragmentInteraction(DummyItem item);
     }
+
+
+
 }
+

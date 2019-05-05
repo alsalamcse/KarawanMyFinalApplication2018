@@ -89,7 +89,7 @@ public class SignUpActivity extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(),LoginActivity.class);
+                Intent i=new Intent(getApplicationContext(),LoginActivity2.class);
                 startActivity(i);
             }
         });

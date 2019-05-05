@@ -14,7 +14,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-class LoginActivity extends AppCompatActivity {
+public class LoginActivity2 extends AppCompatActivity {
+
     private EditText etEmail;
     private EditText etPassword;
     private Button btnSignIn;
@@ -35,8 +36,7 @@ class LoginActivity extends AppCompatActivity {
                 dataHandler();
             }
 
-            private void dataHandler() {
-            }
+
         });
     }
 
@@ -48,6 +48,8 @@ class LoginActivity extends AppCompatActivity {
             etEmail.setError("wrong Email");
             isok = false;
         }
+        if(isok)
+            signIn(email,password);
     }
     private void signIn (String email,String password) {
         FirebaseAuth auth=FirebaseAuth.getInstance();
@@ -55,16 +57,15 @@ class LoginActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    Toast.makeText(LoginActivity.this,"signIn Successful",Toast.LENGTH_SHORT).show();
-                    Intent intent=new Intent(LoginActivity.this,MainTabsActivity.class);
+                    Toast.makeText(LoginActivity2.this,"signIn Successful",Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(LoginActivity2.this,MainTabsActivity.class);
                     startActivity(intent);
                 }
                 else {
-                    Toast.makeText(LoginActivity.this,"signIn."+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity2.this,"signIn."+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                     task.getException().printStackTrace();
                 }
             }
         });
     }
 }
-
