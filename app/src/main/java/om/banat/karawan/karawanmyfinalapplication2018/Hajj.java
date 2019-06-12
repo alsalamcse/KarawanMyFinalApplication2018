@@ -1,5 +1,7 @@
 package om.banat.karawan.karawanmyfinalapplication2018;
 
+import android.widget.EditText;
+
 public class Hajj {
     private String Name;
     private String LastName;
@@ -12,11 +14,14 @@ public class Hajj {
     {
     }
 
+    public static void setKey(String key) {
+    }
+
     public String getName() {
         return Name;
     }
 
-    public void setName(String name) {
+    public void setName(EditText name) {
         Name = name;
     }
 
@@ -24,7 +29,7 @@ public class Hajj {
         return LastName;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastName(EditText lastName) {
         LastName = lastName;
     }
 
@@ -32,7 +37,7 @@ public class Hajj {
         return Age;
     }
 
-    public void setAge(String age) {
+    public void setAge(EditText age) {
         Age = age;
     }
 
@@ -40,7 +45,7 @@ public class Hajj {
         return PlaceLiving;
     }
 
-    public void setPlaceLiving(String placeLiving) {
+    public void setPlaceLiving(EditText placeLiving) {
         PlaceLiving = placeLiving;
     }
 
@@ -48,7 +53,7 @@ public class Hajj {
         return Email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(EditText email) {
         Email = email;
     }
 
@@ -56,7 +61,7 @@ public class Hajj {
         return Phone;
     }
 
-    public void setPhone(String phone) {
+    public void setPhone(EditText phone) {
         Phone = phone;
     }
 
@@ -64,7 +69,7 @@ public class Hajj {
         return Information;
     }
 
-    public void setInformation(String information) {
+    public void setInformation(EditText information) {
         Information = information;
     }
 

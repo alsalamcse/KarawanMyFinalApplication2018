@@ -32,47 +32,48 @@ public class AddHajj extends AppCompatActivity {
     DatabaseReference databaseAddHajj;
 
 
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_hajj);
-        databaseAddHajj=FirebaseDatabase.getInstance().getReference("Hajj");
+        databaseAddHajj = FirebaseDatabase.getInstance().getReference("Hajj");
 
 
-        edName = (EditText) findViewById(R.id.edName);
-        edLastName = (EditText) findViewById(R.id.edLastName);
-        edAge = (EditText) findViewById(R.id.edAge);
-        edPlaceLiving = (EditText) findViewById(R.id.edPlaceLiving);
-        edEmail = (EditText) findViewById(R.id.edEmail);
-        edphone = (EditText) findViewById(R.id.edphone);
-        edInformation = (EditText) findViewById(R.id.edInformation);
-        btShare = (Button) findViewById(R.id.btShare);
-       // auth=FirebaseAuth.getInstance();
+        edName = findViewById(R.id.edName);
+        edLastName = findViewById(R.id.edLastName);
+        edAge = findViewById(R.id.edAge);
+        edPlaceLiving = findViewById(R.id.edPlaceLiving);
+        edEmail = findViewById(R.id.edEmail);
+        edphone = findViewById(R.id.edphone);
+        edInformation = findViewById(R.id.edInformation);
+        btShare = findViewById(R.id.btShare);
+        // auth=FirebaseAuth.getInstance();
         //user=auth.getCurrentUser();
         btShare.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-               dataHandler();
-                Intent i=new Intent(getApplicationContext(),HajjFragment.class);
+                dataHandler();
+                Intent i = new Intent(getApplicationContext(), HajjFragment.class);
                 startActivity(i);
             }
         });
     }
+
     private void dataHandler() {
 
     }
-    private void AddHajj(){
-        String Name =edName.getText().toString();
-        String LastName=edLastName.getText().toString();
-        String Age=edAge.getText().toString();
-        String PlaceLiving=edPlaceLiving.getText().toString();
-        String Email=edEmail.getText().toString();
-        String Phone=edphone.getText().toString();
-        String Information=edInformation.getText().toString();
+
+    private void AddHajj() {
+        String Name = edName.getText().toString();
+        String LastName = edLastName.getText().toString();
+        String Age = edAge.getText().toString();
+        String PlaceLiving = edPlaceLiving.getText().toString();
+        String Email = edEmail.getText().toString();
+        String Phone = edphone.getText().toString();
+        String Information = edInformation.getText().toString();
 
 
-        boolean isok=true;
+        boolean isok = true;
         if (edName.length() == 0) {
             edName.setError("you have to write a name ");
             isok = false;
@@ -87,51 +88,49 @@ public class AddHajj extends AppCompatActivity {
             edAge.setError("you have to write age");
             isok = false;
         }
-        if ( edPlaceLiving.length()==0){
+        if (edPlaceLiving.length() == 0) {
             edPlaceLiving.setError("you have to write place Living");
 
-        if (isok) {
-            AddHajj hajj= new AddHajj();
+            if (isok) {
+                Hajj hajj = new Hajj();
 
-           AddHajj
-            book.setWriter(writer);
-            book.setYear(year);
-            book.setThem(them);
-            book.setRecomm(recom);
+                hajj.setName(edName);
+                hajj.setLastName(edLastName);
+                hajj.setAge(edAge);
+                hajj.setPlaceLiving(edPlaceLiving);
+                hajj.setEmail(edPlaceLiving);
+                hajj.setPhone(edphone);
+                hajj.setInformation(edInformation);
 
-            //FirebaseAuth auth=FirebaseAuth.getInstance();
-            //profile.setOwner(auth.getCurrentUser().getEmail());
 
-            DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
 
-            String key = reference.child("MyBook").push().getKey();
-            Hajj.setKey(key);
-            reference.child("MyBook").child(key).setValue(book).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task1) {
-                    if (task1.isSuccessful()) {
-                        Toast.makeText(AddHajj().this, "add successed", Toast.LENGTH_SHORT).show();
-                        Intent i=new Intent(addBookActivity.this,bookListActivity.class);
-                        startActivity(i);
-                    } else {
-                        Toast.makeText(addBookActivity.this, "add failed" + task1.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                //FirebaseAuth auth=FirebaseAuth.getInstance();
+                //profile.setOwner(auth.getCurrentUser().getEmail());
+
+                DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+
+                String key = reference.child("MyBook").push().getKey();
+                Hajj.setKey(key);
+                reference.child("MyBook").child(key).setValue(hajj).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task1) {
+                        if (task1.isSuccessful()) {
+                           Toast.makeText(AddHajj().this,"add successed",Toast.LENGTH_SHORT. show);
+                            Intent i = new Intent(AddHajj.this, HajjFragment.class);
+                            startActivity(i);
+                        } else {
+                            Toast.makeText(AddHajj.this, "add failed" + task1.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+
                     }
+                });
 
-                }
-            });
-
+            }
         }
+
+
     }
-
-
-
-        }
-
-
-
 }
-
-        }
 
 
 
