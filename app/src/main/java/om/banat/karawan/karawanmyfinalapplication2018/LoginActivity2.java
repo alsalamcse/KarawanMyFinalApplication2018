@@ -30,16 +30,16 @@ public class LoginActivity2 extends AppCompatActivity {
         btnSignIn = (Button) findViewById(R.id.btnSignIn);
         btnSignUp = (Button) findViewById(R.id.btnSignUp);
 
-        btnSignIn.setOnClickListener(new View.OnClickListener() {
+      btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(),SignUpActivity.class);
                 dataHandler();
             }
 
-
         });
-    }
 
+            }
     private void dataHandler() {
         boolean isok = true;
         String email = etEmail.getText().toString();
@@ -66,6 +66,9 @@ public class LoginActivity2 extends AppCompatActivity {
                     task.getException().printStackTrace();
                 }
             }
+
         });
     }
 }
+
+

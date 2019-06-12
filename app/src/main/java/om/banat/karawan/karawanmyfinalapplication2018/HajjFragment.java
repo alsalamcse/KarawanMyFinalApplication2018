@@ -1,5 +1,6 @@
 package om.banat.karawan.karawanmyfinalapplication2018;
 
+import android.app.SearchManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -9,8 +10,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -30,11 +34,14 @@ import java.util.List;
 
 public class HajjFragment extends Fragment {
 
+
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
     // TODO: Customize parameters
     private int mColumnCount = 1;
     private OnListFragmentInteractionListener mListener;
+
+
 
 
     /**
@@ -83,6 +90,7 @@ public class HajjFragment extends Fragment {
         return view;
     }
 
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -93,15 +101,12 @@ public class HajjFragment extends Fragment {
                     + " must implement OnListFragmentInteractionListener");
         }
     }
+
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
     }
-    private FloatingActionButton SearchButton;
-
-
-
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -116,6 +121,7 @@ public class HajjFragment extends Fragment {
         // TODO: Update argument type and name
         void onListFragmentInteraction(DummyItem item);
     }
+
 
 
 

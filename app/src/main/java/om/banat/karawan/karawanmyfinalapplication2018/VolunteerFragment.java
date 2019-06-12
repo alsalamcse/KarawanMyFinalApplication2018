@@ -73,8 +73,6 @@ public class VolunteerFragment extends Fragment {
         }
         return view;
     }
-
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -85,13 +83,11 @@ public class VolunteerFragment extends Fragment {
                     + " must implement OnListFragmentInteractionListener");
         }
     }
-
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
     }
-
 
     /**
      * This interface must be implemented by activities that contain this

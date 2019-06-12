@@ -1,6 +1,7 @@
 package om.banat.karawan.karawanmyfinalapplication2018;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -34,6 +37,7 @@ public class AddHajj extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_hajj);
         databaseAddHajj=FirebaseDatabase.getInstance().getReference("Hajj");
+
 
         edName = (EditText) findViewById(R.id.edName);
         edLastName = (EditText) findViewById(R.id.edLastName);
@@ -66,23 +70,66 @@ public class AddHajj extends AppCompatActivity {
         String Email=edEmail.getText().toString();
         String Phone=edphone.getText().toString();
         String Information=edInformation.getText().toString();
-        if (!TextUtils.isEmpty(Name)) {
-            Toast.makeText(this, "Hajj Added", Toast.LENGTH_LONG).show();
-        }
-        else
-            Toast.makeText(this,"You Should enter a name",Toast.LENGTH_LONG).show();
-        {
 
 
-
-        }
-
-
-
-
+        boolean isok=true;
+        if (edName.length() == 0) {
+            edName.setError("you have to write a name ");
+            isok = false;
 
 
         }
+        if (edLastName.length() == 0) {
+            edLastName.setError("you have to write a family");
+            isok = false;
+        }
+        if (edAge.length() == 0) {
+            edAge.setError("you have to write age");
+            isok = false;
+        }
+        if ( edPlaceLiving.length()==0){
+            edPlaceLiving.setError("you have to write place Living");
+
+        if (isok) {
+            AddHajj hajj= new AddHajj();
+
+           AddHajj
+            book.setWriter(writer);
+            book.setYear(year);
+            book.setThem(them);
+            book.setRecomm(recom);
+
+            //FirebaseAuth auth=FirebaseAuth.getInstance();
+            //profile.setOwner(auth.getCurrentUser().getEmail());
+
+            DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+
+            String key = reference.child("MyBook").push().getKey();
+            Hajj.setKey(key);
+            reference.child("MyBook").child(key).setValue(book).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task1) {
+                    if (task1.isSuccessful()) {
+                        Toast.makeText(AddHajj().this, "add successed", Toast.LENGTH_SHORT).show();
+                        Intent i=new Intent(addBookActivity.this,bookListActivity.class);
+                        startActivity(i);
+                    } else {
+                        Toast.makeText(addBookActivity.this, "add failed" + task1.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+            });
+
+        }
+    }
+
+
+
+        }
+
+
+
+}
 
         }
 

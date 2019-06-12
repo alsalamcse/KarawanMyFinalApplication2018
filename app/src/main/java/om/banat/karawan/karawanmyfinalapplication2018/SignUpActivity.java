@@ -40,7 +40,8 @@ public class SignUpActivity extends AppCompatActivity {
         btnSave = (Button) this.<View>findViewById(R.id.btnSave);
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 dataHandler();
             }
         });
@@ -89,7 +90,7 @@ public class SignUpActivity extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(),LoginActivity2.class);
+                Intent i=new Intent(getApplicationContext(),HajjFragment.class);
                 startActivity(i);
             }
         });
