@@ -3,13 +3,13 @@ package om.banat.karawan.karawanmyfinalapplication2018;
 import android.widget.EditText;
 
 public class Hajj {
-    private String Name;
-    private String LastName;
-    private String Age;
-    private String PlaceLiving;
-    private String Email;
-    private String Phone;
-    private String Information;
+    private EditText Name;
+    private EditText LastName;
+    private EditText Age;
+    private EditText PlaceLiving;
+    private EditText Email;
+    private EditText Phone;
+    private EditText Information;
     public Hajj()
     {
     }
@@ -17,7 +17,7 @@ public class Hajj {
     public static void setKey(String key) {
     }
 
-    public String getName() {
+    public EditText getName() {
         return Name;
     }
 
@@ -25,7 +25,7 @@ public class Hajj {
         Name = name;
     }
 
-    public String getLastName() {
+    public EditText getLastName() {
         return LastName;
     }
 
@@ -33,7 +33,7 @@ public class Hajj {
         LastName = lastName;
     }
 
-    public String getAge() {
+    public EditText getAge() {
         return Age;
     }
 
@@ -41,7 +41,7 @@ public class Hajj {
         Age = age;
     }
 
-    public String getPlaceLiving() {
+    public EditText getPlaceLiving() {
         return PlaceLiving;
     }
 
@@ -49,7 +49,7 @@ public class Hajj {
         PlaceLiving = placeLiving;
     }
 
-    public String getEmail() {
+    public EditText getEmail() {
         return Email;
     }
 
@@ -57,7 +57,7 @@ public class Hajj {
         Email = email;
     }
 
-    public String getPhone() {
+    public EditText getPhone() {
         return Phone;
     }
 
@@ -65,7 +65,7 @@ public class Hajj {
         Phone = phone;
     }
 
-    public String getInformation() {
+    public EditText getInformation() {
         return Information;
     }
 

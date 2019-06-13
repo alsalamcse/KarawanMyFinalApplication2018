@@ -53,8 +53,8 @@ public class AddHajj extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 dataHandler();
-                Intent i = new Intent(getApplicationContext(), HajjFragment.class);
-                startActivity(i);
+//                Intent i = new Intent(getApplicationContext(), HajjFragment.class);
+//                startActivity(i);
             }
         });
     }
@@ -115,7 +115,7 @@ public class AddHajj extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task1) {
                         if (task1.isSuccessful()) {
-                           Toast.makeText(AddHajj().this,"add successed",Toast.LENGTH_SHORT. show);
+                          // Toast.makeText(AddHajj().this,"add successed",Toast.LENGTH_SHORT. show);
                             Intent i = new Intent(AddHajj.this, HajjFragment.class);
                             startActivity(i);
                         } else {
